@@ -1,86 +1,62 @@
-# Tic-Tac-Titans
+# Personal Website
 
-A modern implementation of Tic-Tac-Toe with AI opponent, built with Go and WebSocket.
+A modern, responsive personal website built with Astro, showcasing my professional experience, skills, and projects.
+
+## Features
+
+- Modern, responsive design
+- Dark/Light mode support
+- SEO optimized
+- Fast performance
+- Contact form
+- CV request functionality
+- Social media integration
+
+## Tech Stack
+
+- [Astro](https://astro.build) - Modern static site builder
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- [MDX](https://mdxjs.com) - Markdown with JSX support
+- [TypeScript](https://www.typescriptlang.org) - Type-safe JavaScript
 
 ## Project Structure
 
 ```
 .
-├── backend/
-│   ├── cmd/
-│   │   └── server/         # Main server application
-│   ├── internal/
-│   │   ├── game/          # Game logic implementation
-│   │   └── websocket/     # WebSocket server implementation
-│   └── go.mod             # Go module definition
-└── frontend/              # Next.js frontend (to be implemented)
-```
-
-## Features
-
-- 5x5 Tic-Tac-Toe board
-- Real-time gameplay using WebSocket
-- AI opponent with strategic moves
-- Concurrent game sessions
-- JSON-based game state communication
-
-## Backend Setup
-
-1. Install Go (version 1.16 or later)
-2. Install dependencies:
-   ```bash
-   go mod tidy
-   ```
-3. Build and run the server:
-   ```bash
-   go build ./cmd/server
-   ./server
-   ```
-
-## API
-
-### WebSocket Endpoint
-- `ws://localhost:8080/ws`
-
-### Message Format
-
-#### Player Move
-```json
-{
-  "row": 0,
-  "col": 0
-}
-```
-
-#### Game State Response
-```json
-{
-  "board": [
-    ["", "", "", "", ""],
-    ["", "", "", "", ""],
-    ["", "", "", "", ""],
-    ["", "", "", "", ""],
-    ["", "", "", "", ""]
-  ],
-  "currentPlayer": "X",
-  "winner": "",
-  "gameOver": false
-}
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/         # Astro pages
+│   ├── styles/        # Global styles
+│   ├── config/        # Site configuration
+│   └── content/       # MDX content
+├── public/            # Static assets
+└── astro.config.mjs   # Astro configuration
 ```
 
 ## Development
 
-### Dependencies
-- github.com/gorilla/websocket
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Building
-```bash
-go build ./cmd/server
-```
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-### Running
-```bash
-./server
-```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
-The server will start on port 8080 and serve the frontend from the `frontend/dist` directory. 
+## Deployment
+
+The site is automatically deployed to GitHub Pages using GitHub Actions. The workflow:
+- Builds the site
+- Deploys to GitHub Pages
+- Runs on every push to main branch
+
+## License
+
+MIT 
