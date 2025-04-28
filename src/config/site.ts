@@ -1,11 +1,11 @@
 import { currentExperience } from '../utils/experience';
 
-export const site = {
+const site = {
   name: "Ankit Kumar",
   title: "Ankit Kumar - DevOps Engineer",
   description: "DevOps Engineer specializing in Cloud Security and Infrastructure",
   social: {
-    github: "https://github.com/ankitkumar-dev",
+    github: "https://github.com/thestrid3r",
     linkedin: "https://linkedin.com/in/ankitkumar-dev",
     twitter: "https://twitter.com/ankitkumar_dev",
   },
@@ -69,4 +69,6 @@ export const site = {
       "NoSQL",
     ],
   },
-}; 
+};
+
+export { site }; 
