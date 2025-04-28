@@ -6,8 +6,7 @@ const site = {
   description: "DevOps Engineer specializing in Cloud Security and Infrastructure",
   social: {
     github: "https://github.com/thestrid3r",
-    linkedin: "https://linkedin.com/in/ankitkumar-dev",
-    twitter: "https://twitter.com/ankitkumar_dev",
+    linkedin: "https://www.linkedin.com/in/ankeetsinha/",
   },
   navigation: [
     { name: "About", href: "/" },
