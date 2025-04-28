@@ -4,8 +4,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ankitkumar.dev', // Replace with your GitHub Pages URL
-  base: '/', // If your site is in a subdirectory, set this to '/subdirectory/'
+  site: 'https://ankitkumar.github.io', // Your GitHub Pages URL
+  base: '/personal_website/', // Your repository name
   integrations: [mdx(), tailwind()],
   output: 'static',
   build: {
