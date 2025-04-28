@@ -20,9 +20,9 @@ const sortedWork = workEntries.sort((a, b) => {
 ---
 
 <BaseLayout title="Experience - Ankit Kumar">
-  <div class="snap-y snap-mandatory h-screen overflow-y-auto">
+  <div class="py-8">
     {sortedWork.map((entry, index) => (
-      <section class="snap-start h-screen flex items-center justify-center">
+      <section class="mb-12 last:mb-0">
         <div class="max-w-4xl mx-auto px-4">
           <TimelineItem
             title={entry.data.company}
