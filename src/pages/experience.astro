@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import { getCollection } from 'astro:content';
+
+const workEntries = await getCollection('work');
+const sortedWork = workEntries.sort((a, b) => {
+  // Extract start date from period string (e.g., "06/2022 - Present" -> "06/2022")
+  const getStartDate = (period: string) => {
+    const [start] = period.split(' - ');
+    return start;
+  };
+  
+  // Convert date string to Date object for comparison
+  const dateA = new Date(getStartDate(a.data.period).split('/').reverse().join('-'));
+  const dateB = new Date(getStartDate(b.data.period).split('/').reverse().join('-'));
+  
+  return dateB.getTime() - dateA.getTime();
+});
+---
+
+<BaseLayout title="Experience - Ankit Kumar">
+  <div class="snap-y snap-mandatory h-screen overflow-y-auto">
+    {sortedWork.map((entry, index) => (
+      <section class="snap-start h-screen flex items-center justify-center">
+        <div class="max-w-4xl mx-auto px-4">
+          <TimelineItem
+            title={entry.data.company}
+            subtitle={entry.data.role}
+            period={entry.data.period}
+            location={entry.data.location}
+            description={entry.data.description}
+            technologies={entry.data.technologies}
+            companyDescription={entry.data.companyDescription}
+          />
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <style>
+    /* Hide scrollbar but keep functionality */
+    .snap-y::-webkit-scrollbar {
+      display: none;
+    }
+    .snap-y {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</BaseLayout> 

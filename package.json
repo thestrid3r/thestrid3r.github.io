@@ -1,0 +1,30 @@
+{
+  "name": "ankit-resume",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "2.1.0",
+    "@astrojs/tailwind": "5.1.0",
+    "alpinejs": "3.13.3",
+    "astro": "4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
+    "eslint": "8.45.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-astro": "0.29.0",
+    "prettier": "3.0.0",
+    "prettier-plugin-astro": "0.12.0",
+    "tailwindcss": "3.3.0",
+    "typescript": "5.3.3"
+  }
+}

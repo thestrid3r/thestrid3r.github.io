@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  period: string;
+  location: string;
+  description: string[];
+  technologies: string[];
+  companyDescription?: string;
+}
+
+const { title, subtitle, period, location, description, technologies, companyDescription } = Astro.props;
+---
+
+<article class="relative pl-8 pb-12 last:pb-0">
+  <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-brand"></div>
+  <div class="absolute left-2 top-4 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800"></div>
+  
+  <div class="space-y-6">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div class="flex-1">
+        <h3 class="text-xl font-semibold group relative">
+          <span class="cursor-help">{title}</span>
+          {companyDescription && (
+            <span class="absolute left-0 top-full mt-2 w-64 p-2 bg-gray-100 dark:bg-gray-800 text-sm rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+              {companyDescription}
+            </span>
+          )}
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">{subtitle}</p>
+      </div>
+      <div class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
+        {period} • {location}
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      {technologies.map((tech) => (
+        <span class="px-2 py-1 text-sm bg-gray-100 dark:bg-gray-800 rounded-full">
+          {tech}
+        </span>
+      ))}
+    </div>
+    
+    <div class="prose dark:prose-invert max-w-none">
+      <ul class="list-disc pl-5 space-y-2">
+        {description.map((item) => (
+          <li class="text-gray-700 dark:text-gray-300">{item}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</article> 

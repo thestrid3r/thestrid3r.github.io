@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import CV from '../components/CV.astro';
+import { calculateTotalExperience } from '../utils/experience';
+
+const experience = calculateTotalExperience();
+---
+
+<BaseLayout title="Ankit Kumar - Lead DevOps & Cloud Security Engineer">
+  <section class="max-w-3xl mx-auto text-center space-y-8 font-sans antialiased">
+    <img
+      src="/avatar.jpg"
+      alt="Ankit Kumar"
+      width={128}
+      height={128}
+      class="mx-auto object-cover w-32 h-32"
+    />
+    
+    <div class="space-y-4">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Ankit Kumar</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 font-medium tracking-wide">
+        Lead DevOps & Cloud Security Engineer
+      </p>
+    </div>
+    
+    <div class="prose dark:prose-invert max-w-none mx-auto text-left space-y-6">
+      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        I'm a DevOps engineer with {experience} of experience shaping cloud-native infrastructure, security-first architectures, and resilient DevOps ecosystems.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        I have scaled secure, high-availability platforms across AWS and GCP, led Kubernetes-driven modernization initiatives, and architected compliant multi-cloud environments adhering to PCI DSS, ISO, and NIST standards.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        I believe infrastructure is not just about uptime — it's a catalyst for business agility, security, and innovation. I specialize in designing scalable, cost-optimized platforms that empower engineering teams to move faster with confidence.
+      </p>
+      <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        My leadership philosophy is simple: build systems that are resilient by design, automate relentlessly, and infuse security at every layer — all while mentoring teams to think boldly and engineer for the future.
+      </p>
+    </div>
+    
+    <div class="flex justify-center">
+      <CV />
+    </div>
+  </section>
+</BaseLayout> 
