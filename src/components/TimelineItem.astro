@@ -45,7 +45,7 @@ const { title, subtitle, period, location, description, technologies, companyDes
     <div class="prose dark:prose-invert max-w-none">
       <ul class="list-disc pl-5 space-y-2">
         {description.map((item) => (
-          <li class="text-gray-700 dark:text-gray-300">{item}</li>
+          <li class="text-gray-700 dark:text-gray-300" set:html={item}></li>
         ))}
       </ul>
     </div>
