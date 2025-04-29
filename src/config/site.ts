@@ -12,6 +12,7 @@ const site = {
     { name: "About", href: "/" },
     { name: "Experience", href: "/experience" },
     { name: "Skills", href: "/skills" },
+    { name: "Ops Odyssey", href: "#" },
   ],
   cv: {
     path: "public/cv/AnkitKumarResume.pdf",
