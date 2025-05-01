@@ -12,7 +12,7 @@ const site = {
     { name: "About", href: "/" },
     { name: "Experience", href: "/experience" },
     { name: "Skills", href: "/skills" },
-    { name: "Ops Odyssey", href: "#" },
+    { name: "Ops Odyssey", href: "https://thestrid3r.github.io/Ops_Odyssey/" },
     { name: "Work With Me", href: "/#contact" },
   ],
   cv: {
