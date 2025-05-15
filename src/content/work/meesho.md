@@ -23,7 +23,7 @@ description: [
 
 
   "Worked on Kubernetes-native monitoring and logging solutions by migrating from Prometheus to VictoriaMetrics and integrating PagerDuty (PD) and the Elastic Stack, enabling real-time observability, efficiently handling 13 trillion daily data points, and reducing MTTD & MTTR by 50%.",
-  "Worked on designing the Incident management policy and framework from grounds up .,"
+  "Worked on designing the Incident management policy and framework from grounds up .",
   "Worked on Creation of DR policy and architecture and implementation of RTO and RPO within the Orgs policy.",
 
   
